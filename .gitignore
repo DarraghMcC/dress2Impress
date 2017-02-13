@@ -1,0 +1,14 @@
+target/
+.netbeans/
+data/
+
+.idea
+*.iml
+
+.classpath
+.project
+.settings/
+
+.DS_Store
+
+logs/

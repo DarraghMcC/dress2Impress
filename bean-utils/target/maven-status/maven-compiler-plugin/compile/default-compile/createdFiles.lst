@@ -1,0 +1,4 @@
+com/dress2Impress/common/InjectUtils.class
+com/dress2Impress/common/AOPUtils.class
+com/dress2Impress/common/converter/ResultConverter.class
+com/dress2Impress/common/ProxyUtils.class
