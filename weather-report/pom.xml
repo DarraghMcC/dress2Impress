@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>application</artifactId>
-
-    <name>Dress2Impress Application</name>
+    <artifactId>weather-report</artifactId>
 
     <dependencies>
         <dependency>
@@ -26,7 +24,8 @@
 
         <dependency>
             <groupId>com.dress2Impress</groupId>
-            <artifactId>weather-report</artifactId>
+            <artifactId>test-utils</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -34,16 +33,28 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
-    <build>
-    <finalName>${app.name}-${project.version}</finalName>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-    </plugins>
-    </build>
-
 </project>

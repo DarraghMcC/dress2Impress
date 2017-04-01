@@ -8,6 +8,9 @@
     <artifactId>dress2Impress</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>testutils</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -22,6 +25,11 @@
         <spring-boot.version>1.3.8.RELEASE</spring-boot.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <slf4j.version>1.7.22</slf4j.version>
+        <spring-web.verison>1.4.4.RELEASE</spring-web.verison>
+        <javax.verison>3.0.1</javax.verison>
+        <spring.aop>1.5.1.RELEASE</spring.aop>
+        <mockito-all.version>1.9.5</mockito-all.version>
+        <hamcrest.version>1.3</hamcrest.version>
     </properties>
 
     <profiles>
@@ -34,6 +42,7 @@
                 <module>common</module>
                 <module>bean-utils</module>
                 <module>logging</module>
+                <module>weather-report</module>
                 <module>application</module>
             </modules>
         </profile>
@@ -61,7 +70,19 @@
 
             <dependency>
                 <groupId>com.dress2Impress</groupId>
+                <artifactId>weather-report</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dress2Impress</groupId>
                 <artifactId>bean-utils</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dress2Impress</groupId>
+                <artifactId>test-utils</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -73,20 +94,40 @@
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-tomcat</artifactId>
-                <version>${spring-boot.version}</version>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-web.verison}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${javax.verison}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-all.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-all</artifactId>
+                <version>${hamcrest.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring.aop}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
