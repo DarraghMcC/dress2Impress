@@ -9,21 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>application</artifactId>
-
-    <name>Dress2Impress Application</name>
+    <artifactId>dress-common</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.dress2Impress</groupId>
-            <artifactId>common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.dress2Impress</groupId>
-            <artifactId>logging</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.dress2Impress</groupId>
             <artifactId>weather-report</artifactId>
@@ -31,12 +19,13 @@
 
         <dependency>
             <groupId>com.dress2Impress</groupId>
-            <artifactId>dress-api</artifactId>
+            <artifactId>common</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.dress2Impress</groupId>
-            <artifactId>dress-common</artifactId>
+            <artifactId>test-utils</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -44,16 +33,23 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-    </dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-    <build>
-    <finalName>${app.name}-${project.version}</finalName>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-    </plugins>
-    </build>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

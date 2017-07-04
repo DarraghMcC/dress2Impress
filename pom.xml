@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>testutils</module>
+        <module>api-common</module>
     </modules>
 
     <parent>
@@ -30,6 +30,8 @@
         <spring.aop>1.5.1.RELEASE</spring.aop>
         <mockito-all.version>1.9.5</mockito-all.version>
         <hamcrest.version>1.3</hamcrest.version>
+        <spring-restdocs.version>1.0.1.RELEASE</spring-restdocs.version>
+        <snippetsDirectory>${project.build.directory}/generated-rest-docs</snippetsDirectory>
     </properties>
 
     <profiles>
@@ -42,14 +44,29 @@
                 <module>common</module>
                 <module>bean-utils</module>
                 <module>logging</module>
+                <module>test-utils</module>
                 <module>weather-report</module>
                 <module>application</module>
+                <module>dress-common</module>
+                <module>dress-api</module>
             </modules>
         </profile>
     </profiles>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.dress2Impress</groupId>
+                <artifactId>dress-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dress2Impress</groupId>
+                <artifactId>api-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.dress2Impress</groupId>
                 <artifactId>common</artifactId>
@@ -128,6 +145,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-aop</artifactId>
                 <version>${spring.aop}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.restdocs</groupId>
+                <artifactId>spring-restdocs-mockmvc</artifactId>
+                <version>${spring-restdocs.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

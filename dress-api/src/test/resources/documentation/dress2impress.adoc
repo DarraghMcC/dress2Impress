@@ -1,0 +1,9 @@
+= dress2impress
+:toc: left
+
+== Check jacket
+
+include::{snippets}/dressController/get/http-request.adoc[]
+include::{snippets}/dressController/get/request-fields.adoc[]
+include::{snippets}/dressController/get/http-response.adoc[]
+
