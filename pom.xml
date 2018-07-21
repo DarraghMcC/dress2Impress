@@ -75,6 +75,12 @@
 
             <dependency>
                 <groupId>com.dress2Impress</groupId>
+                <artifactId>dress-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dress2Impress</groupId>
                 <artifactId>logging</artifactId>
                 <version>${project.version}</version>
             </dependency>
